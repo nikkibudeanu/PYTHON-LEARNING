@@ -17,4 +17,9 @@ print(donothing())
 parrot = "It's not pining, it's passed on! This parrot is no more! It has ceased to be!"
 print(parrot)
 
+# convert data types
+first_number = int(input("Input your first number:"))
+second_number = int(input("Input your second number:"))
+
+print(first_number + second_number)
 
