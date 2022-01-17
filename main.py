@@ -56,3 +56,12 @@ num_b %=3
 print(num_b)
 
 
+# F-STRINGS example: f"{variable}"
+name = input("What's your name? ")
+# Here we don't need age to be a number as we are not
+# going to do any calculations with it so we don't need to wrap the
+# input() in the str() method
+age = input("What's your age: ")
+
+# The Modern way of formatting a string
+print(f"Hello {name}, you are {age} years old")
