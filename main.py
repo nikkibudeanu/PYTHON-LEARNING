@@ -173,4 +173,10 @@ if number == 5:
 else:
     print(f"{number} is not equal to 5")
 
+# ternary expressions 
+my_boolean = False
+
+my_string = "Hello" if my_boolean else "World"
+
+print(my_string)
 
