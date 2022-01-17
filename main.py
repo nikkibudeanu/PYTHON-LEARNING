@@ -57,6 +57,7 @@ print(num_b)
 
 
 # F-STRINGS example: f"{variable}"
+
 name = input("What's your name? ")
 # Here we don't need age to be a number as we are not
 # going to do any calculations with it so we don't need to wrap the
@@ -65,3 +66,21 @@ age = input("What's your age: ")
 
 # The Modern way of formatting a string
 print(f"Hello {name}, you are {age} years old")
+
+
+# CONCATENATION STRINGS 
+name = "Igor"
+age = 35
+
+# write your code here
+concat_string= name +  " is "  + str(age)
+print(concat_string)
+
+
+
+
+
+
+
+
+
