@@ -45,4 +45,14 @@ print(2 ** 3) #8
 print(18 % 7) #4
 print(10900 % 60) #40
 
+# Assignment Operators
+num = 100
+print(num)
+num //=50
+print(num)
+num_b = 100
+print(num_b)
+num_b %=3
+print(num_b)
+
 
