@@ -138,3 +138,33 @@ print(my_string_2.split(" "))
 
 spaced_string = "     42       "
 print(spaced_string.strip())
+
+
+#challenge
+dwarves = "Grumpy, Dopey, Doc, Happy, Bashful, Sneezy, Sleepy"
+print(dwarves)
+
+lowercase_string = dwarves.lower()
+print(lowercase_string)
+
+commas_removed=lowercase_string.replace("," ,  "")
+print(commas_removed)
+
+split_list=commas_removed.split(" ")
+print(split_list)
+
+# containtment
+#In coding, it is often useful to check whether a value exists within a sequence. 
+#The sequence can be a list or a range or a string. 
+# Just like in Javascript when you used the includes method, in Python, you can use the in keyword to do this. 
+# The in operator returns a Boolean value (True or False). 
+# The operator is a shorthand for calling an object’s __contains__ method.
+
+print( "rat" in "crate")
+print ( "ink" not in "sink")
+print("robbie" in  ["gary", "howard", "mark", "jason"])
+
+
+
+
+
