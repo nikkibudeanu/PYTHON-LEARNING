@@ -180,3 +180,45 @@ my_string = "Hello" if my_boolean else "World"
 
 print(my_string)
 
+# nested else if elements
+exit_program = True
+manual_override = False
+critical_systems_shutdown = False
+
+if not exit_program and not critical_systems_shutdown:
+    if manual_override:
+        print("Shutting system down manually")
+    else:
+        print("This program will not exit just yet")
+elif exit_program and critical_systems_shutdown is not True:
+    print("Critical systems must be safely shut down before exiting the program")
+else:
+    print("This program will now be terminated...")
+
+    # for loops
+    languages = ["HTML", "CSS", "JavaScript"]
+for language in languages:
+  print(language)
+
+
+for character in "Python":
+  print(character)
+
+
+    # range
+   # If you want to loop through code a specific number of times you can use the range function. 
+   # The range() function will generate a sequence of integers. 
+   # In passing through an argument of 5, we’re saying that we wish for that sequence to be comprised of 5 numbers. 
+   # Most programming languages, including Python, are zero-based. Therefore they start counting at 0 instead of 1. 
+   # When we use the range function to generate a sequence of 5 integers, it will create a series ranging from 0-4. 
+   # Those numbers are 0, 1, 2, 3 and 4. We use the for loop to iterate each of the numbers in this sequence.
+
+foods = ['bacon', 'sausage', 'egg', 'spam']
+
+for ind in range(len(foods)):
+	# In this example only the index is iterated over not the value
+    print(ind, foods[ind])
+print(foods)
+# In this case we need to calculate the length of the foods collection
+# Then we generate a range of integers equal to that length
+# Then we iterate over that range of integers
