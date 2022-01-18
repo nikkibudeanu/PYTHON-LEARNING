@@ -273,3 +273,12 @@ for number in range(10):
     print(f'Number is  {number}')
 
 print('Left the loop')
+
+# continue
+for number in range(10):
+    if number == 5:
+        continue    # continue here
+
+    print(f'Number is  {number}')
+
+print('Left the loop')
