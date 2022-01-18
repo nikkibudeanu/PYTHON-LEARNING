@@ -263,3 +263,13 @@ i = 0
 while(i<=9):
     print(i)
     i += 1
+
+#Controlling Iteration (Break, Continue & Pass)
+# break
+for number in range(10):
+    if number == 5:
+        break    # break here
+
+    print(f'Number is  {number}')
+
+print('Left the loop')
