@@ -256,3 +256,10 @@ while play_game:
         print("That is not a valid option. Please try again.")
 
 print("Thanks for playing")
+
+
+# prints out numbers for 0 to 9 - challenge
+i = 0
+while(i<=9):
+    print(i)
+    i += 1
