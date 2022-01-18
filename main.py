@@ -222,3 +222,37 @@ print(foods)
 # In this case we need to calculate the length of the foods collection
 # Then we generate a range of integers equal to that length
 # Then we iterate over that range of integers
+
+
+
+users =  ['anna', 'chris', 'brian']
+
+for i in range(len(users)):
+       users[i] = users[i].capitalize()
+print(users)
+
+# while loop
+countdown_number = 10
+
+while countdown_number >= 0:
+    print(f"{countdown_number} seconds...")
+    countdown_number -= 1
+
+print("And We Have Lift Off!")
+
+# while loop 2
+
+play_game = True
+
+while play_game:
+    continue_playing = input("Would you like to continue playing the game? y/n ")
+    
+    if continue_playing.lower() == "y":
+        print("You have decided to continue playing the game.")
+    elif continue_playing.lower() == "n":
+        print("Now closing the game...")
+        play_game = False
+    else:
+        print("That is not a valid option. Please try again.")
+
+print("Thanks for playing")
