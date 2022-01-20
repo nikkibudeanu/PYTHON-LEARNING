@@ -358,3 +358,24 @@ print(fruits[0])
 # Using an index of -1 gives the last element. Negative indexing counts from the right
 print(fruits[-1])
 print(fruits[2])
+
+
+# slicing lists challenge
+names = ["Mark", "Betty", "John", "Sally", "Bill", "Steven", "Mary", "Emily", "Adam"]
+
+# write your code here
+name = names[2]
+print(name)
+
+two_names= slice(2, 4)
+print(names[two_names])
+
+other_names= slice(1,6,2)
+print(names[other_names])
+
+
+
+
+
+
+
