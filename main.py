@@ -721,6 +721,28 @@ print(f"The letters in hello and world but not both are: {hello^world}") # ^ is 
 # The letters in hello and world but not both are: {'e', 'W', 'd', 'r', 'H'}
 
 
+# sets challenge
+
+product_list = ['hammer', 'saw', 'nails', 'wood', 'screws', 'paint', 'brushes', 'light bulbs']
+products_bought = {'nails', 'screws', 'hammer', 'wood', 'saw', 'hammer', 'saw', 'nails', 'nails', 'screws', 'hammer'}
+
+# add your code here
+
+products_bought.add('light bulbs')
+products_bought.update( ['wood', 'screws', 'saw'])
+has_nails = "nails" in products_bought 
+has_paint = "paint" in products_bought
+unsold_items = set(product_list) - products_bought
+
+print(has_nails)
+print(has_paint)
+print(unsold_items)
+
+
+
+
+
+
 
 
 
