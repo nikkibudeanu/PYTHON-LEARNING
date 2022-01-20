@@ -660,10 +660,65 @@ challenger.pop("status")
 print(challenger)
 
 
+#sets
 
 
+#A set is another useful Python data type. 
+# It is a mathematical concept of a collection of items with no duplicates. 
+# It also uses curly brackets, but commas separate items in the collection. 
+# However, this means that to create an empty set; you have to use the method set() as {} would create an empty dictionary. 
+# You can use the in keyword to see if an item is in a set.
 
 
+#first example
+
+#In the first runnable example, we have added multiple identical items to the set. 
+# However, when we print the set, the duplicates have been removed. 
+# You cannot change the items in a set, but you can add an additional single item with add() or add new multiple items as a list with update(). 
+# To remove an item use discard() rather than remove() as it will error where the item does not exist. 
+# Sets are unordered so using pop() is not recommended as you will not necessarily know which 'last item' will be removed except by the return value.
+
+
+breakfast = {'bacon', 'egg', 'spam', 'spam', 'spam', 'spam', 'spam'}
+print(breakfast)
+print('egg' in breakfast)
+breakfast.add('sausage')
+print(breakfast)
+breakfast.update(['Lobster Thermidor', 'truffle pate', 'crevettes', 'shallots','aubergines'])
+print(breakfast)
+breakfast.discard('aubergines')
+print(breakfast)
+
+# ---> outcome
+#{'bacon', 'egg', 'spam'}
+#True
+#{'bacon', 'sausage', 'egg', 'spam'}
+#{'bacon', 'shallots', 'sausage', 'egg', 'truffle pate', 'crevettes', 'spam', 'aubergines', 'Lobster Thermidor'}
+#{'bacon', 'shallots', 'sausage', 'egg', 'truffle pate', 'crevettes', 'spam', 'Lobster Thermidor'}
+
+
+#second example
+
+#Sets have mathematical operations like union, intersection, difference, and symmetric difference. 
+# A union is all values that are in either set or both. 
+# The intersection is the values that are in both sets. 
+# The difference is the values that are in the first set but not the second. 
+# The symmetric difference is all values that are in one of the sets but not both of them.
+
+hello = set("Hello")
+world = set("World")
+print(f"The unique letters in hello are: {hello}")
+print(f"The letters in hello or world or both are: {hello|world}") # | is the symbol for union
+print(f"The letters in both hello and world are: {hello&world}") # & is the symbol for intersection
+print(f"The letters in hello but not world are: {hello-world}") # - is the symbol for difference
+print(f"The letters in hello and world but not both are: {hello^world}") # ^ is the symbol for symmetric difference
+
+#---> outcome
+#The unique letters in hello are: {'l', 'e', 'o', 'H'}
+# The letters in hello or world or both are: {'o', 'l', 'e', 'W', 'r', 'H', 'd'}
+# The letters in both hello and world are: {'o', 'l'}
+# The letters in hello but not world are: {'e', 'H'}
+# The letters in hello and world but not both are: {'e', 'W', 'd', 'r', 'H'}
 
 
 
