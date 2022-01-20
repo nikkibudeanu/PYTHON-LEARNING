@@ -347,6 +347,10 @@ x = slice(1, 4, 2)
 fruits[x]
 
 
+# shortened slicing
+fruits = ["apple", "banana", "peach", "pear", "plum", "orange"]
+print(fruits[0:2])
+
 
 fruits = ["apple", "banana", "peach", "pear", "plum", "orange"]
 # As lists are zero-indexed index 0 is the first element
