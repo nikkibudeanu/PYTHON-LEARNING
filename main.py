@@ -802,6 +802,34 @@ for ind in range(len(scores)):
 print(scores)
 
 
+#list comprehensions
+
+#List comprehensions are available in Python as a concise way to create a list. 
+# It is commonly used where you want to generate a list based on an operation or to create a new sub-list of an existing list.
+
+# 1. [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+print([i for i in range(10)])
+
+# 2. [0, 2, 4, 6, 8, 10]
+print([i for i in range(0,11,2)])
+
+# 3. [0, 1, 4, 9, 16, 25, 36, 49]
+print([x**2 for x in range(0,8)])
+
+# 4. [(0, 1), (1, 2), (2, 3), (3, 4), (4, 5)]
+print([((i,(i+1))) for i in range(5)])
+
+# 5. ['woohoo', 'woohoo', 'woohoo', 'woohoo', 'woohoo', 'woohoo', 'woohoo', 'woohoo']
+print(['woohoo' for i in range(7)])
+
+# 6. ['h', 'e', 'l', 'l', 'o', ' ', 'w', 'o', 'r', 'l', 'd']
+hw = 'hello world'
+print([i for i in hw])
+
+# 7. [('A', 'D'), ('A', 'E'), ('A', 'F'), ('B', 'D'), ('B', 'E'), ('B', 'F'), ('C', 'D'), ('C', 'E'), ('C', 'F')]
+ab = 'ABCDEF'
+print([(ab[i],ab[j]) for i in range(0,3) for j in range(3,6)])
+
 
 
 
