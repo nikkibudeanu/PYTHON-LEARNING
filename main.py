@@ -637,6 +637,27 @@ print(user)
 #{}
 
 
+# dictionaries methods challenge
+challenger = {
+	"name": "Katniss Everdeen",
+	"age": 16,
+	"district": 12,
+	"weapon": "Bow and Arrow", 
+	"status": "Victor"
+}
+
+# add your code here
+
+challenger.update({'occupation': "Hunter"})
+occupation = challenger.get('occupation', 0)
+print(occupation)
+challenger.update({'age': 17})
+challenger.pop("status")
+
+
+
+
+print(challenger)
 
 
 
