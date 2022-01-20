@@ -778,6 +778,28 @@ print()
 for direction in directions:
     print(direction)
 
+# iterating data structures challenge
+data = {
+	"first_name": "brian",
+	"last_name": "johnson",
+	"occupation": "student"
+}
+
+scores = [6, 9, 8, 7, 8, 9]
+
+# write your code here
+
+for key, value in data.items():
+	if value != "student":
+		data[key] = value.capitalize()
+
+print(data)	
+
+
+for ind in range(len(scores)):
+	scores[ind] += 1
+
+print(scores)
 
 
 
