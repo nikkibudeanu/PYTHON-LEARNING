@@ -331,3 +331,13 @@ print(fruits)
 # Sort the list alphabetically:
 fruits.sort()
 print(fruits)
+
+
+
+# slice lists
+fruits = ["apple", "banana", "peach", "pear", "plum", "orange"]
+# As lists are zero-indexed index 0 is the first element
+print(fruits[0])
+# Using an index of -1 gives the last element. Negative indexing counts from the right
+print(fruits[-1])
+print(fruits[2])
