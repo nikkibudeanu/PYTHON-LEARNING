@@ -567,4 +567,47 @@ print(list(user.values()))
 print(user)
 
 
+# dictionaries challenge
+data = {
+    "first_name": "Arthur",
+    "last_name": "Dent",
+    "species": "Human"
+}
+
+# add your code here
+name = data["first_name"]
+print(name)
+
+
+species = data["species"]
+print(species)
+
+data['age'] = 42
+
+
+
+# this will print the data to the terminal
+print(data)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
