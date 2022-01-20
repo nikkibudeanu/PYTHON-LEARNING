@@ -738,9 +738,45 @@ print(has_nails)
 print(has_paint)
 print(unsold_items)
 
+# Iterating python data structures
+
+#Dictionaries are more complicated due to the key: value structure. You can use the keyword in for dictionaries but what will be returned is just the key. You could, of course, return the value using the square bracket notation. However, there is a better way to iterate over a dictionary.
+
+#If we needed access to both keys and values, we’d have to use a dictionary method called .items()
+
+#In the first runnable example, we define two new variables in our for loop, key and value. These variables don’t need to be called key and value, but as the first variable will be the key and the second variable will be the value, it’s considered to be a good convention. Then after that, we just print out the key and the value, with some nice formatting to denote each key/value with which we’re working.
 
 
+user = {
+    "username": "tombombadil",
+    "first_name": "Tom",
+    "last_name": "Bombadil",
+    "age": 100
+}
 
+for key, value in user.items():
+    print(f"Key: {key}")
+    print(f"Value: {value}")
+    print("------------------")
+
+
+#Here is how you would iterate over a set. It is much like for a list. However, remember that the order may not remain static. You could also use range() and len() to get index values.
+
+# Create a set
+directions = set(['north', 'south', 'east', 'west'])
+
+# Print its members
+for direction in directions:
+    print(direction)
+
+# Add an item to the set:
+directions.add('northwest')
+
+print()
+# Print the members again
+# Notice the order cannot be relied upon!
+for direction in directions:
+    print(direction)
 
 
 
