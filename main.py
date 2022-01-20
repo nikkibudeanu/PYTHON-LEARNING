@@ -517,12 +517,54 @@ spaceship = {
 
 print(spaceship)
 
+# getting and setting items in dictionaries
+# A dictionary can be thought of as a mapping between indexes (known as keys) and values. 
+# Each key must be unique and unchanging as that key maps to a particular value. 
+# The value can be any type of object and can appear in the same dictionary multiple times. 
+# This association is called a key:value pair or an item. The order of a dictionary is not fixed. 
+# It does not have an index as a list has. 
+# Two people creating the same dictionary on different computers might get a different order of items. 
+# To get the value of a dictionary, you have to use the key.
 
 
 
+#This time in the runnable example, we have created our dictionary with default values of empty strings. 
+# In this case, we have used the dict() function, which can create dictionaries from lists. 
+# The fromkeys() method is used to specify the keys list as the keys and a variable of an empty string as the values.
+# To set a value, you can use the items key in square bracket notation and the assignment operator with a value. 
+# The default values are all overridden with the new values.
+# To get a value, you can use the same notation without the assignment. 
+# Here we have printed the age of 100. 
+# However, if we attempted to get the value of a nonexistent key, then an error would occur. 
+# To avoid this you can use the get() method which will get the value if the key exists and return None if it does not. 
+# More methods will be covered in the next unit.
+# As key 'home' returns None lets add a key:value pair. 
+# The same syntax is used as when we were setting the 'username', 'first_name', 'last_name' and 'age' values. 
+# As 'home' key is new, it is added to the dictionary with its value. 
+# As the 'age' key already exists, the value is changed from 100 to 99. 
+# If we delete a key the value is deleted with it.
+# If we want to get a list of the keys only you can use the keys() method and wrap that in a list() function. 
+# The same syntax but using values or items will get a list of the dictionary values or items instead.
 
-
-
+keys = ['username', 'first_name', 'last_name', 'age']
+default_value = ''
+user = dict.fromkeys(keys, default_value)
+print(user)
+user['username'] = 'tombombadil'
+user['first_name'] = 'Tom'
+user['last_name'] = 'Bombadil'
+user['age'] = 100
+print(user)
+print(user['age'])
+print(user.get('home', "doesn't exist"))
+user['home'] = 'Withywindle, Middle-Earth'
+user['age'] = 99
+print(user)
+del user['home'] 
+print(user)
+print(list(user.keys()))
+print(list(user.values()))
+print(user)
 
 
 
