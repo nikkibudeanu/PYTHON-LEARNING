@@ -507,6 +507,15 @@ print(sorted(user))
 print(user)
 print('username' in user)
 
+# dictionary challenge
+spaceship = {
+   "name": "Red Dwarf",
+   "type": "Mining vessel",
+   "owner": "Jupiter Mining Corporation",
+   "captain":"Frank Hollister"
+}
+
+print(spaceship)
 
 
 
