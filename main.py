@@ -335,6 +335,19 @@ print(fruits)
 
 
 # slice lists
+
+#Slice notation with indexing is used to slice the list up. We can slice up lists to get subsets of a list. 
+# For example, if we wanted to get the first two items in a list, then we would use the following syntax slice(2) 
+# which creates a new list with only the first two elements of the existing list.
+# This slice object can take three arguments; slice(start, end, step) which takes 
+# integer values of the starting position, end position and step size.
+
+fruits = ["apple", "banana", "peach", "pear", "plum", "orange"]
+x = slice(1, 4, 2)
+fruits[x]
+
+
+
 fruits = ["apple", "banana", "peach", "pear", "plum", "orange"]
 # As lists are zero-indexed index 0 is the first element
 print(fruits[0])
