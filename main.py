@@ -830,6 +830,24 @@ print([i for i in hw])
 ab = 'ABCDEF'
 print([(ab[i],ab[j]) for i in range(0,3) for j in range(3,6)])
 
+# list comprehension challenge
+
+letters = [i for i in "Marvin"]
+
+print(letters)
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+evens = [num for num in numbers if num % 2 == 0]
+
+print(evens)
+
+
+# GET THE PRIME NUMBERS FROM A LIST
+evens = [num for num in numbers if num % 2 == 0]
+
+
+
 
 
 
