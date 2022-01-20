@@ -867,6 +867,15 @@ print({i:(True if i%2==0 else False) for i in range(10)})
 print({(i,j): (True if i==j else False) for i in range(4) for j in range(4)})
 
 
+# dictionary comprehension challenge
+cards = ['king', 'queen', 'jack', 'ace']
+
+# write your code here
+
+cards_dict = {card:card.upper() for card in cards}
+print(cards_dict)
+
+
 
 
 
