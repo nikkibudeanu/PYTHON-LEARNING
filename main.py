@@ -363,7 +363,7 @@ print(fruits[2])
 # slicing lists challenge
 names = ["Mark", "Betty", "John", "Sally", "Bill", "Steven", "Mary", "Emily", "Adam"]
 
-# write your code here
+
 name = names[2]
 print(name)
 
@@ -372,6 +372,84 @@ print(names[two_names])
 
 other_names= slice(1,6,2)
 print(names[other_names])
+
+#slicing list challenge option 2
+names = ["Mark", "Betty", "John", "Sally", "Bill", "Steven", "Mary", "Emily", "Adam"]
+
+# write your code here
+name = names[2]
+print(name)
+
+two_names = names[2:4]
+print(two_names)
+
+other_names = names[1:6:2]
+print(other_names)
+
+
+
+# list methods 
+#list.append(x)	Add an item to the end of the list.
+#list.extend(list)	Extend the list by appending another list.
+#list.insert(i, x)	Insert an item at a given position. The first argument is the index of the element before which to insert
+#list.remove(x)	Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.
+#list.pop(i)	Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and returns the last item in the list.
+#list.clear()	Remove all items from the list.
+#list.index(x, start, end)	Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there is no such item.The optional arguments start and end are interpreted as in the slice notation.
+#list.count(x)	Return the number of times x appears in the list.
+#list.sort(key=None, reverse=False)	Sort the items of the list in place
+#list.reverse()	Reverse the elements of the list in place.
+#list.copy()	Return a copy of the list. Equivalent to a[:].
+
+
+menu = ['eggs', 'bacon', 'spam', 'spam']
+print(menu)
+print(menu.count('spam'))
+print(menu.count('eggs'))
+print(menu.index('eggs'))
+print(menu.reverse())
+print(menu)
+print(menu.append('lobster thermidor'))
+print(menu)
+print(menu.sort())
+print(menu)
+print(menu.pop())
+
+#outcome of the example above
+#['eggs', 'bacon', 'spam', 'spam']
+#2
+#1
+#0
+#None
+#['spam', 'spam', 'bacon', 'eggs']
+#None
+#['spam', 'spam', 'bacon', 'eggs', 'lobster thermidor']
+#None
+#['bacon', 'eggs', 'lobster thermidor', 'spam', 'spam']
+#spam
+
+# list methods challenge 
+crew = ["Jean-Luc", "Wesley", "Warf", "Deanna", "William", "Data", "Geordie", "Tasha"]
+print(crew)
+
+crew.pop() 
+print(crew)
+
+crew.append("Beverly")
+print(crew)
+
+crew.extend(["Miles", "Guinan"])
+print(crew)
+
+crew.sort(key=len, reverse=True)
+
+
+
+
+
+
+
+
 
 
 
