@@ -443,7 +443,24 @@ print(crew)
 
 crew.sort(key=len, reverse=True)
 
+# tuples
+#In the Determining The Data Type unit, we saw that a tuple is a data type. 
+# It is one of the four collection data types. Unlike a list, it is not changeable. 
+# It can contain duplicate items. Those items can be of different types such as strings, integers, 
+# floats or even another tuple. A tuple can be created by separating values with commas. 
+# An empty tuple is created with empty parentheses, and a singleton tuple is one value with a trailing comma. Creating a tuple is referred to as packing. So when you want to get the values back, it is referred to as unpacking.
+#  It is also possible to get a value with indexing.
 
+
+empty = ()
+singleton = 'hello',
+tup = 12345, 54321, 'hello!' # packing two ints and a string in a tuple
+print(empty)
+print(singleton)
+print(tup)
+print(tup[1])
+x, y, z = tup # unpacking tuple into variables
+print(z)
 
 
 
