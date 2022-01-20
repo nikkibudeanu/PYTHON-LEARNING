@@ -303,3 +303,31 @@ while i < 10:
     if j > i/j:
         print(f'{i} is a prime number')
     i += 1
+
+
+# lists
+ fruits = ['apple', 'orange', 'banana', 'pear', 'plum']
+
+# Print all fruits
+for fruit in fruits:
+    print(fruit)
+
+print()
+
+# Get an item located in a list
+second_item = fruits[1]
+print(second_item)
+print()
+
+# Add an item to the list
+fruits.append('cherries')
+print(fruits)
+print()
+
+# Reverse the list
+fruits.reverse()
+print(fruits)
+
+# Sort the list alphabetically:
+fruits.sort()
+print(fruits)
