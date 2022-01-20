@@ -463,6 +463,20 @@ x, y, z = tup # unpacking tuple into variables
 print(z)
 
 
+# tuples challenge
+cars = ("Tesla", "BMW", "Ferrari")
+
+print(cars)
+
+get_car = cars[1]
+print(get_car)
+
+car_one, car_two, car_three= cars
+print(car_one)
+print(car_two)
+print(car_three)
+
+
 
 
 
