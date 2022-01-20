@@ -476,7 +476,36 @@ print(car_one)
 print(car_two)
 print(car_three)
 
+# dictionaries
+# Dictionaries allow us to take things a step further when it comes to storing information in a collection. 
+# Dictionaries will enable us to use what are called key/value pairs. In the example above, 'immutable' 
+# is the key, and its derivation is the value. When using a dictionary in Python, 
+# we define our key/value pairs enclosed in curly braces ({}). 
+# After that, we use a string as our key or any other immutable data type. 
+# Then we use a colon to separate the key from the value, and then we have the value.
+#You would choose a dictionary as a data structure when you have values you want to associate with a key. 
+# For example, if you want to map a phone number to a name. 
+# A dictionary is very efficient to search as you have the key. Lists are on the other hand, much slower to search.
 
+# dictionary example
+user = {
+    "username": "tombombadil",
+    "first_name": "Tom",
+    "last_name": "Bombadil",
+    "age": 100
+}
+
+print(user)
+print(user['age'])
+user['home'] = 'Withywindle, Middle-Earth'
+user['age'] = 99
+print(user)
+del user['home'] 
+print(user)
+print(list(user))
+print(sorted(user))
+print(user)
+print('username' in user)
 
 
 
