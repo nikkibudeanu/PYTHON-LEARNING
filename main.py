@@ -960,9 +960,22 @@ print(student_data)
 
 
 
+# naming functions
 
+#A function within a class is known as a method. 
+# A method has the same naming conventions as a class. 
+# If you have a method in a class you don't wish to be public, then start its name with an underscore. 
+# This is just a convention for saying "Please don't touch" to other developers who are working on your code.
 
+#If you use a double underscore prefix (dunder) for an attribute in a method, 
+# then the attribute name will be altered, so it cannot be accessed by the regular methods. 
+# The attribute name is “mangled.”
 
+def divide(num, denom):
+    return num / denom
+    
+def my_country(country):
+    print(f"I am from {country}.")
 
 
 
