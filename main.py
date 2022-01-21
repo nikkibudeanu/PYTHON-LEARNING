@@ -978,6 +978,16 @@ def my_country(country):
     print(f"I am from {country}.")
 
 
+# naming class 
+
+#When naming a class, try and give it a name that gives the reader an idea of the purpose of the class. 
+# Class names should have their first character capitalised.
+
+class ComplexNumber:
+def __init__(self, realpart, imagpart):
+    self.r = realpart
+    self.i = imagpart
+
 
 
 
