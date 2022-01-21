@@ -876,9 +876,54 @@ cards_dict = {card:card.upper() for card in cards}
 print(cards_dict)
 
 
+# nested data structures 
+matrix = [
+    [11, 12, 13, 14],
+    [15, 16, 17, 18],
+    [19, 20, 21, 22],
+]
+transposed = []
+for i in range(4):
+    transposed_row = []
+    for row in matrix:
+        transposed_row.append(row[i])
+    transposed.append(transposed_row)
 
 
+matrix = [
+    [11, 12, 13, 14],
+    [15, 16, 17, 18],
+    [19, 20, 21, 22],
+]
 
+print([[row[i] for row in matrix] for i in range(4)])
+
+# In this runnable example, we see the type of nesting dictionary structure you might find in a database. 
+# To access the nested dictionary, you string together the commands you would normally use. 
+# Therefore payroll['emp1']['name'] goes down one level to get the name of the first employee. 
+# The get() method can also be used; payroll['emp1'].get('Wage') as in this case to get the first employees wage. 
+# We can add and delete values as before using their keys. 
+# To print this data out in an easily readable fashion, it is best to use a nested loop. 
+# The first loop gets the key-value pairs and prints the key. 
+# The nested loop gets the key-value pairs from the nested dictionary and prints both.
+
+payroll = {'emp1': {'name': 'Precious', 'job': 'Mgr', 'Wage': 50000},
+     'emp2': {'name': 'Kim', 'job': 'Dev', 'Wage': 60000},
+     'emp3': {'name': 'Sam', 'job': 'Dev', 'Wage': 70000}}
+
+print(payroll)
+
+print(payroll['emp1']['name'])
+print(payroll['emp1'].get('salary'))
+print(payroll['emp1'].get('Wage'))
+payroll['emp4'] = {'name': 'Max', 'job': 'Admin', 'Wage': 30000}
+print(payroll)
+del payroll['emp3']
+
+for id, info in payroll.items():
+    print(f'\nEmployee ID: {id}')
+    for key in info:
+        print(f'{key} : {info[key]}')
 
 
 
