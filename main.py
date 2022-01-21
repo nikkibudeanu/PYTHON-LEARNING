@@ -1009,6 +1009,25 @@ foo = long_function_name(
 
 
 
+#reserved keywords
+
+#Keywords are reserved words in Python. 
+# That means they cannot be used as ordinary identifiers like a variable, function, method or class name. 
+# They have a specific meaning and purpose within Python and cannot be used for anything other than that purpose.
+
+
+#Defining Functions in Python Refresh
+
+# Most code will be broken out into functions. 
+# Functions are a grouping of statements that work together to perform any actions that we may need
+
+#There is another type of function in Python known as Lambda. 
+# A lambda function is a small anonymous function. 
+# It can take any number of arguments but only has one expression. 
+# As you can see the function has no name (hence anonymous) so we have assigned it to the variable add.
+
+add = lambda a, b : a + b
+print(add(5, 12))
 
 
 
