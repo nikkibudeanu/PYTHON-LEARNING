@@ -926,6 +926,49 @@ for id, info in payroll.items():
         print(f'{key} : {info[key]}')
 
 
+# nested data structures challenge
+student_data = [
+    {
+        "name" : "John Smith",
+        "email": "john@gmail.com",
+        "subjects": ["Math", "Psychology", "Physics", "Chemistry", "Biology"]
+    },
+    {
+        "name" : "Mary Jones",
+        "email": "mary@gmail.com",
+        "subjects": ["Fine Art", "Music", "Biology", "Geography", "Politics"]
+    }
+]
+
+print(student_data)
+	
+
+# naming variables 
+
+#Python is quite forgiving when it comes to naming. 
+# However, there are suggested style rules that you should follow. 
+# Variable names should be lowercase and if including multiple words, should use underscores as separators. 
+# Giving a variable a name that explains its purpose is encouraged. 
+# Where the meaning is obvious, you can use a single letter variable name. 
+# There is a convention where you prefix a global variable with an underscore 
+# if you are using it in a module imported into another module. 
+# There is no constant in Python unlike the const in JavaScript, 
+# so if you have a variable you do not want to be changed, then use capital letters to denote this. 
+# Generally, it is a bad idea to use lowercase L, uppercase O and uppercase 
+# I for single-character names as they are easily confused by eye with other characters.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
