@@ -1060,3 +1060,13 @@ age = get_user_input("Input your age:")
 # 3. Then function calls run sequentially
 print_out_to_console(f"Your name is {name}")
 print_out_to_console(f"You are {age} years old")
+
+
+# function calling challenge 
+
+def print_hello_world():
+    print("Hello World!")
+    
+print_hello_world()
+
+
