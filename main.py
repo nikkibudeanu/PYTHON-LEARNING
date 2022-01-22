@@ -1486,6 +1486,94 @@ print(customer_one.lname)
 print(customer_one.email)
 print(customer_one.phone)
 
+#The "self" Keyword
+
+# The self keyword associates functions and properties with a class. 
+# It also holds references to data and behaviour of particular instances of a class. 
+# It’s customary to use self to refer to the class instance, but in fact, any variable could be used. 
+# It must be the first parameter of any function in the class. 
+# Python simply uses self to state to what instance to assign an instance attribute. 
+# In the previous unit, we created an object bullitt with color of Green. 
+# The self keyword is used to confirm that the argument "Green" for the object instance bullitt is a reference 
+# to the color attribute of the class Car.
+
+class Bird:
+   """
+   Bird class
+   """
+   def __init__(self, kind, call):
+      #properties
+       self.kind = kind
+       self.call = call
+
+   #behaviour
+   def description(self):
+       """
+       describe the bird
+       """
+       return f"A {self.kind} goes {self.call}" 
+       
+owl = Bird('Owl', 'Twit Twoo!')
+print(owl.description())
+
+# self keyword challenge 
+# Write your code here
+class OrderItem():
+    """
+    Creates an instance of OrderItem
+    """
+    def __init__(self, item, price, quantity):
+        self.item = item
+        self.price = price
+        self.quantity = quantity
+    
+    def description(self):
+        """
+        Describes the order item
+        """
+        return f"{self.quantity} x {self.item} at ${self.price} each"
+
+
+# The code below will use your class to print values to the terminal after 
+# it has been written. Comment the lines below back in to test it  
+
+order_item_one = OrderItem("bowtie", 10, 3)
+print(order_item_one.description())
+
+order_item_two = OrderItem("Fez", 25, 1)
+print(order_item_two.description())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
