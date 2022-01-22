@@ -1337,3 +1337,55 @@ def pass_function(function_name, **args):
     function_name(f=args['l'])
 
 pass_function(print_arguments, l='spam')
+
+#Decorators
+
+#A decorator is a way in Python to add new functionality to an existing function without modifying its structure. 
+# This is useful as you do not need to create new functionality in your code if a decorator already exists for that purpose. 
+# A decorator is said to wrap a function to modify its behaviour. 
+# Python has something called the “pie syntax” to make decorator use simpler. 
+# The @ symbol is used to prefix the decorator name.
+
+
+
+#Here is a very simple decorator. 
+# It modifies the function say_hello by printing a string before it is called and after it is called. 
+# The decorator is modifying the behaviour of the function. 
+# It wraps the function and extends the behaviour of the wrapped function without modifying the function permanently.
+
+def my_decorator(func):
+    def wrapper():
+        print("The function has not been called yet. Let's call it.")
+        func()
+        print("The function was called and has returned a result.")
+    return wrapper
+
+@my_decorator
+def say_hello():
+    print("Hello, world!")
+    
+say_hello()
+
+
+# Now let's look at a real-world example of using a decorator. 
+# We have a decorator that defines what units you want to display your function results in. 
+# It is demonstrated with a function to calculate area. 
+# The decorator is then used to say that on this occasion you want the result in meters squared. 
+# By changing the argument in the decorator, you can change this to acres, for example, without altering the function. 
+# This same decorator could be used for any function that outputs a value with units.
+
+def define_units(unit):
+    """Define the units"""
+    def decorator_define_units(func):
+        func.unit = unit
+        return func
+    return decorator_define_units
+
+@define_units('m^2')
+def area(length, width):
+    """Calculate area of rectangle or parallelogram"""
+    return length * width
+
+# The unit defined in the decorator can be used with dot notation
+# In this case the function area units can be used as area.unit
+print(f'The area is {area(3,5)}{area.unit}')
