@@ -1102,3 +1102,16 @@ username = input("What's your name? ")
 print(print_message())
 print(print_message(username))
 
+#Up until now, we have been using the print() in all our examples. 
+# This is because it prints the result to the console. 
+# This is useful as a developer as you get a human-readable result printed in the console. 
+# Of course, computers do not need a human-readable output. In a program consisting of functions, 
+# you will instead get the function to return a result. The return statement returns the result of 
+# the function and is the point where the code stops running. Statements after a return statement are not executed. 
+# A return statement can only be used within a function. 
+# As we have seen in previous lessons if no expression is included in the return statement, then None is returned.
+
+def add_two_numbs():
+    print("function running")
+
+add_two_nums()
