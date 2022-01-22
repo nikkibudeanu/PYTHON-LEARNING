@@ -1111,7 +1111,17 @@ print(print_message(username))
 # A return statement can only be used within a function. 
 # As we have seen in previous lessons if no expression is included in the return statement, then None is returned.
 
-def add_two_numbs():
-    print("function running")
+def add_two_nums(num1 , num2):
+    sum=num1+num2
+    return sum
 
-add_two_nums()
+result = add_two_nums(2, 3)
+print(result)
+
+
+def add_three_nums(num1, num2, num3):
+    sum=num1 +num2+ num3
+    return sum
+    
+result= add_three_nums(2,3,2)
+print(result)
