@@ -1259,3 +1259,16 @@ def update_access():
 update_access()
 
 print(can_access) # will now print True if an age >= 18 is entered
+
+# global keyword challenge
+
+test_passed = False
+answer = "friend"
+
+def speak_friend_and_enter():
+    global test_passed # use global keyword
+    if answer == "friend":
+      test_passed = True
+        
+speak_friend_and_enter()
+print(test_passed)
