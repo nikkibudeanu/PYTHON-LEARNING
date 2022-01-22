@@ -1125,3 +1125,19 @@ def add_three_nums(num1, num2, num3):
     
 result= add_three_nums(2,3,2)
 print(result)
+
+#function challenge
+
+#Define a function named add_numbers that takes two parameters named: nums_tuple, min_value
+#The function should return the sum of all the values in the nums_tuple that are greater or equal to the min_value
+# Outside of the function
+# Create a variable named: total and assign it the return value from calling the add_numbers function and passing in the two arguments: (21, 4, 7, 19, 1), 15
+# print total
+
+def add_numbers(nums_tuple, min_value):
+    return sum([x for x in nums_tuple if x >= min_value])
+
+total = add_numbers((21, 4, 7, 19, 1), 15)
+print(total)
+
+    
