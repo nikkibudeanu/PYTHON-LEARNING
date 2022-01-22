@@ -1314,3 +1314,26 @@ def outer_function():
 
 result = outer_function()
 print(result)
+
+#Passing Functions Around
+
+#One thing you may have noticed in the calling functions example is that functions are passed around to other functions. 
+# This is possible in Python as a function is itself an object. 
+# A function object can be referred to in the same way as a string object. 
+# You can assign a function to a variable or even store it in a data structure. 
+# A function can be passed into another function or even to itself. 
+# In the image, the input x can be another function.
+
+
+def print_arguments( **args ):
+    """Prints the arguments"""
+    print(f'The arguments are {args}')
+
+def pass_function(function_name, **args):
+    """Takes a function as an argument
+    Passes the argument 'l' to the function passed in 
+    """
+    print("This function takes another function as an argument")
+    function_name(f=args['l'])
+
+pass_function(print_arguments, l='spam')
