@@ -1444,4 +1444,51 @@ class HelloWorld:
     def f(self):
         return 'Hello, world!'
 
+#The __init__() Method
+# The first thing to note is that a function within a class is known as a method. 
+# A particular type of method that runs when an instance of the class is created is an initializer. 
+# The __init__ method is known as a dunder, double-underscore or magic method, and these tend to be used on classes mainly. 
+# They use double underscores so as not to conflict with your own defined classes.
+
+
+# An __init__() method on its own would simply create an empty class object. 
+# However, an __init__() method can take arguments. 
+# One of the advantages of object-orientated programming is the ability to model the real world in code. 
+# If you were writing software to use in a car factory or dealership, you could use a class to create an object 
+# Car that has the same properties and attributes as a real car.
+
+class Car:
+	def __init__(self, color, make, model, fueltype):
+		self.color = color
+		self.make = make
+		self.model = model
+		self.fueltype = fueltype
+
+bullitt = Car('Green', 'Ford', 'Mustang', 'Gasoline')
+
+
+# init challenge
+class Customer():
+    """
+    Creates an instance of Customer
+    """
+    
+    def __init__(self, fname, lname, email, phone):
+        self.fname = fname
+        self.lname = lname
+        self.email = email
+        self.phone = phone
+
+customer_one = Customer("Theon", "Greyjoy", "t.gj@email.com", "123456789")
+print(customer_one)
+print(customer_one.fname)
+print(customer_one.lname)
+print(customer_one.email)
+print(customer_one.phone)
+
+
+
+
+
+
 
