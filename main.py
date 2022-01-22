@@ -1214,3 +1214,48 @@ def get_age(**data):
 pats_age = get_age(name="pat", level=4, age=33, occupation="postman")            
 print(pats_age)
 
+
+#Scope - Local vs Global Variables
+
+#Scope when referring to variables means where within the program can that variable be accessed. 
+# The broadest scope is built-in which are the variables that come with the Python coding language. 
+# You don't need to declare or import these variables as they are available to you throughout Python. 
+# If you declare a variable in your program and it is not within any functions, then it is a global variable. 
+# A global variable is available to use anywhere in the program. 
+# However, if you declare a variable inside a function, then it is only available for use within that function. 
+# Therefore it is known as local scope.
+
+#You can, of course in Python create functions inside functions, so a local scope variable in a parent function is also 
+# available in the child function with use of a special keyword (that will be described in an upcoming unit).
+#  If you use the variable from the parent function in the child function, then the scope is neither local nor global. 
+# A Python variable scope that is neither local nor global is referred to as nonlocal. This is called the enclosing scope.
+
+#The global Keyword
+
+#While in many or most other programming languages variables are treated as global if not otherwise declared, 
+# Python deals with variables the other way around. They are local, if not otherwise declared. 
+# This will cause problems, for example, if you access a variable declared outside a function (global) within a 
+# function and try and reassign its value. If you then access the global variable outside the function, 
+# it will still have its original value rather than the new one reassigned within the function. 
+# One workaround would be to return the variable from the function so now it's reassigned value is available outside the function. 
+# However, there is a better option, and that is to use keywords to state which scope is to be used unambiguously.
+
+
+#In this second example you will see as you step through that if you input an age greater than or equal to 18 the 
+# global variable can_access changes to True even in the global scope. This is because the global keyword has been used.
+
+can_access = False
+	
+def update_access():
+    global can_access
+    age = int(input('Enter your age: '))
+    if age >= 18:
+        # The global keyword is used
+        can_access = True
+        return('You are old enough to enter')
+    else:
+        return('You are too young, you may not enter');
+
+update_access()
+
+print(can_access) # will now print True if an age >= 18 is entered
