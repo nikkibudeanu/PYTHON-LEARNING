@@ -1201,3 +1201,16 @@ def concatenate_words(**words):
 print(concatenate_words(a='This', b="is", c="a", d="useful", e="feature"))
 
 
+#challenge kwargs, args and splat
+def make_string(*strings):
+    return ' '.join(strings)
+
+my_string = make_string("Alderaan", "Coruscant", "Dagobah", "Endor", "Hoth")
+print(my_string)
+
+def get_age(**data):
+    return data.get("age", "no age provided")
+     
+pats_age = get_age(name="pat", level=4, age=33, occupation="postman")            
+print(pats_age)
+
