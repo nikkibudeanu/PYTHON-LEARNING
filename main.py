@@ -1141,3 +1141,63 @@ total = add_numbers((21, 4, 7, 19, 1), 15)
 print(total)
 
     
+#Splat! *args & **kwargs
+
+#In a function, you can list the parameters separated with commas. 
+# An elementary function is one that takes parameters a, b and adds their argument values together. 
+# This function is then reusable as you can add any two numbers together. 
+# But what if you want to add three numbers together? 
+# One possible solution is to pass in a list as an argument containing all the numbers you wish to add. 
+# This does require you though to have created the list in advance. 
+# This is inconvenient. 
+# The purpose of *args is to allow you to pass in a varied number of positional arguments. 
+# The iterable object *args can be renamed to any other name as long as it is preceded by the unpacking operator *. 
+# Rather than a list, the *args operator is a tuple so is immutable and needs to be unpacked to use the values.
+
+#The **kwargs object behaves very similarly but rather than a tuple is a dictionary. 
+# Like with *args you can change the name as long as the ** unpacking operator precedes it. 
+# Where you would use **kwargs over *args is when you have a keyword or named arguments.
+
+#In the first function below, you can only ever add two arguments. 
+# The add_integers function is an improvement, but you still have to create a list of the arguments ahead of time. 
+# In the add_many_integers function, we have used *args but renamed them as *integers thus allowing us to use as many integers as we 
+# like when calling the function. 
+# The concatenate_words function uses **kwargs but renamed as **words. 
+# In this case, we have passed in many strings as named arguments, and as this is a dictionary within the function, 
+# we have iterated over the dictionary values.
+
+def addition(a, b):
+    return a + b
+
+print(addition(2,2))
+
+def add_integers(list_integers):
+	total = 0
+	for x in list_integers:
+		total += x
+	return total
+
+list_integers = [1, 2, 3, 4]
+print(add_integers(list_integers))
+
+def add_many_integers(*integers):
+	# Rename *args to something suitable
+	total = 0
+	for x in integers:
+		# As it is a tuple you can use the in keyword to iterate 
+		total += x
+	return total
+
+print(add_many_integers(1,2,3,4,5,6,7,8,9))
+
+def concatenate_words(**words):
+	result = ""
+	# As **kwargs is a dict you need to iterate over .values()
+	for arg in words.values():
+		result += arg
+		result += " "
+	return result
+
+print(concatenate_words(a='This', b="is", c="a", d="useful", e="feature"))
+
+
