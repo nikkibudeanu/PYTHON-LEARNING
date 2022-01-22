@@ -1409,5 +1409,20 @@ def print_article_title(title):
 result = print_article_title('Python Decorators')
 print(result)
 
+# odd numbers challenge 
+
+numbers = [12, 45, 60, 87, 999, 200, 84, 42, 85, 77, 2, 3, 77, 99, 20]
+
+def get_odd_numbers(numbers):
+    #create an empty list
+    odd_numbers = []
+    #
+    for number in numbers:
+        if number % 2 == 1:
+            odd_numbers.append(number)
+            
+    return odd_numbers
+    
+print(get_odd_numbers(numbers))
 
 
