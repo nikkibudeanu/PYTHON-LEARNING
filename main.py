@@ -1272,3 +1272,32 @@ def speak_friend_and_enter():
         
 speak_friend_and_enter()
 print(test_passed)
+
+
+#The nonlocal Keyword
+
+#In the nested function example below you will see that line 4 does not work. 
+# The variable my_age is local to the which_scope function not the inner_scope one. 
+# Scroll down to the second runnable example to see how to fix this.
+
+def which_scope():
+    my_age = 49 # local variable my_age
+    def inner_scope():
+        my_age += 1 # Issue when we try to run this line.
+        print(my_age)
+    inner_scope()
+
+which_scope()
+
+
+#To prevent this you use the nonlocal keyword.
+
+def which_scope():
+    my_age = 49 # local variable my_age
+    def inner_scope():
+        nonlocal my_age # No longer an issue because of this
+        my_age += 1
+        print(my_age)
+    inner_scope()
+
+which_scope()
