@@ -1301,3 +1301,16 @@ def which_scope():
     inner_scope()
 
 which_scope()
+
+# non local keyword challenge
+def outer_function():
+    age = 10
+    def become_adult():
+        nonlocal age
+        age = age + 11
+        
+    become_adult()
+    return age
+
+result = outer_function()
+print(result)
