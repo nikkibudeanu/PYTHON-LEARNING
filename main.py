@@ -1389,3 +1389,25 @@ def area(length, width):
 # The unit defined in the decorator can be used with dot notation
 # In this case the function area units can be used as area.unit
 print(f'The area is {area(3,5)}{area.unit}')
+
+#decorator challenge
+def add_author(func):
+    """
+    Decorator to add string with author information
+    to print after decorated function runs
+    """
+    def wrapper(*args):
+        r = func(*args)
+        return f"{r}\nBy Code Institute"
+    return wrapper
+        
+# write your code here
+@add_author
+def print_article_title(title):
+    return 'Article Title: Python Decorators'
+
+result = print_article_title('Python Decorators')
+print(result)
+
+
+
