@@ -1802,9 +1802,61 @@ sales_manager = SalesManager(45000)
 print(sales_manager.description())
 print(sales_manager.salary)
             
+# Mixins
+
+#A mixin is a class that provides methods to other classes but is not itself a parent class. 
+# You cannot create a subclass of a mixin. If you find yourself creating methods in your subclasses that are very similar, 
+# then this is an opportunity to move that method into a mixin.
+
+#The purpose of a mixin is to reduce the amount of unnecessary duplication of code. 
+# If you have a piece of logic that is frequently repeated in the subclasses, then move it to a mixin.
 
 
+# Here we have a superclass with a method that returns x and two subclasses with methods that return y and z 
+# respectively as a tuple including the inherited x from their parent class. 
+# However, both subclasses also use a mixin which unpacks a tuple and returns the values in a string with some formatting. 
+# The mixin has no __init__ so cannot be a superclass. It is just a class containing a method that you can use in any other 
+# class in your program.
 
+
+class SuperClass:
+    """This is the base or parent class"""
+    def __init__(self, x):
+        self.x = x
+    def result(self):
+        """Method returns a variable x"""
+        return self.x
+
+class Mixin:
+    """This mixin can be used with any class"""
+    def prettify_string(self, a):
+        """Method that returns a string containing variables c and d"""
+        c, d = a # Unpacks the tuple a into variables c and d
+        return f'{c}, {d}!'
+
+class SubClass1(Mixin, SuperClass):
+    def __init__(self, x, y):
+        """Inherits x from SuperClass and extends with variable y"""
+        SuperClass.__init__(self, x)
+        self.y = y
+    def result1(self):
+        """Returns a tuple of x and y"""
+        return self.x, self.y
+    
+class SubClass2(Mixin, SuperClass):
+    def __init__(self, x, z):
+        """Inherits x from SuperClass and extends with variable z"""
+        SuperClass.__init__(self, x)
+        self.z = z
+    def result2(self):
+        """Returns a tuple of x and z"""
+        return self.x, 2 * self.z
+
+hello = SubClass1('Hello', 'World')
+world = SubClass2('Hello', 'World')
+
+print(hello.prettify_string(hello.result1()))
+print(world.prettify_string(world.result2()))
 
 
 
