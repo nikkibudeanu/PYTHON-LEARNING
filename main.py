@@ -2159,6 +2159,38 @@ print(contractor.details())
 # The mixin can also be used
 print(contractor.calculate_holidays(contractor.no_of_years))
 
+# challenge - mixins
+class TicketMixin:
+    """
+    Mixin to calculate ticket price based on age
+    """
+    def calculate_ticket_price(self, age):
+        self.age = age
+        price = 0
+        if self.age < 12:
+            price = 0
+        elif self.age < 18:
+            price = 15
+        elif self.age < 60:
+            price = 20
+        elif self.age >= 60:
+            price = 10
+        return price
+        
+class Customer(TicketMixin):
+    """Create instance of Customer"""
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def describe(self):
+        return f'{self.name} age {self.age} ticket price is {self.calculate_ticket_price(self.age)}'
+
+
+customer = Customer("Ryan Phillips", 22)
+print(customer.describe())
+
 
 
 
