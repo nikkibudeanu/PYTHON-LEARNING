@@ -3051,6 +3051,19 @@ except OSError as e:
     errno, strerror = e.args
     print(f"There is an I/O error number, {errno}: {strerror}.")
 
+# challenge catching specific errors
+values = (10, 5)
+
+def append_to_list(ls, val):
+    try:
+        ls.append(val)
+    except AttributeError as e:
+        print(e.args[0])
+    return ls
+    
+append_to_list(values, 4)
+
+print(values)
 
 
 
