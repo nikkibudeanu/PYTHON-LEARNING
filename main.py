@@ -2538,3 +2538,23 @@ print(f'The filename is {filename}')
 (module, extension) = os.path.splitext(filename)
 print(f'The module is {module}')
 print(f'Its file suffix is {extension}')
+
+
+#random
+
+"""
+An everyday computing problem is making a random choice. 
+Computers are not good at being random. 
+The random library generates pseudo-random numbers that are suitable for most purposes. 
+You can use these for games or simple statistical checks.
+
+"""
+
+import random
+
+print(f'A random float between 0 & 1.0: {random.random()}')
+print(f'A random int between 0 & 10: {random.randrange(11)}')
+print('A random choice from a list: ' + random.choice(['paper', 'scissors', 'rock']))
+deck = ['hearts', 'diamonds', 'spades', 'clubs']
+random.shuffle(deck)
+print(deck)
