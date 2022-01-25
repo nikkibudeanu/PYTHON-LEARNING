@@ -3164,6 +3164,23 @@ print("\n")
 linecount('swift.txt')
 
 
+# else finally challenge
+
+cars = {'ford': 5, 'hyundai': 6}
+
+def update_cars(data, key, val):
+    try:
+        data[key]
+    except KeyError as e:
+        print(f"No key {e} in dictionary")
+    else:
+        data[key] = val
+    finally:
+        return data
+
+update_cars(cars, 'mazda', 8)
+
+print(cars)
 
 
 
