@@ -2472,3 +2472,10 @@ f = open('source.txt')
 lines = f.read()
 f.close()
 print(lines)
+
+# io challenge 
+
+file = open('lyrics.txt')
+lyrics = file.read()
+file.close()
+print(lyrics)
