@@ -2612,3 +2612,47 @@ log_line = 'INFO 2020-07-03T23:27:51 Shutdown complete.'
 
 timestamp = parser.parse(log_line, fuzzy=True)
 print(timestamp)
+
+
+# What are Input/Output Operations?
+
+
+""" 
+Most programs store data in memory while they're running. 
+Choosing the correct data structure can make all the difference in the performance of an application. 
+A skilled developer knows how to use and combine smaller data structures into more substantial and more 
+elaborate models in memory. 
+But as great as these models are, anything held in RAM, or Random Access Memory, is volatile. 
+That means that when the program shuts down, either by deliberately exiting or as a result of a crash, 
+then the data is lost.
+
+Also, as data gets more and more elaborate, some programs just can't store all of the information they work with, 
+in the memory at the same time. Now, this is changing. 
+Memory capacities are growing, and the cost is continuing to fall. 
+Still, to be safe, a persistent store of data on a non-volatile hard drive, solid-state drive, 
+flash memory or some other storage device will continue to be a part of computing for the foreseeable future.
+
+In this module, we're going to have a look at how to store data on a disk using files. 
+You'll already be very familiar with files from your operating system, and there are other ways of storing data, 
+for example in a database, but this is beyond the scope of the current lesson. 
+Even that usually just amounts to storing data in files and accessing them in a certain way.
+"""
+
+#With that in mind, let’s take a look at how we can receive some input from a user. 
+# For this, we’ll need to use the input function. The input function takes a string as an argument. 
+# This is the prompt the user will see. The input function stops the running of the program and waits for 
+# the user to enter data in the command line and press return. Whatever the user inputs is converted to a string. 
+# Therefore if you need it as a number, you need to convert it.
+
+username = input("Type in your name and press return: ")
+# The programme will remain stopped until you respond to this prompt with some text and press the return key
+# As the value type that is received from an input is a string
+# We need to convert it to a number to be able to use it on line 7
+# We can do this by wrapping the input inside the int() method
+age = int(input("Please enter your age: "))
+
+days = 365 * age
+# days is a number
+# To concatenate it to the string we have to convert it to a String
+# Notice below we do this like: str(days)
+print("Hello " + username + ", you have been alive for at least " + str(days) + " days")
