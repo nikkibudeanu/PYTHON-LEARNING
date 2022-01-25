@@ -2389,7 +2389,18 @@ print(addition)
 multiplication = helpers.multiply_intergers(list_integers)
 print(multiplication)
 
+# Math
+
+# Python has a plethora of built-in libraries for everyday tasks. 
+# One of the most useful is Math. 
+# If you need to do a calculation in your code, then it is a good idea to import from this library, 
+# rather than reinventing the wheel.
 
 
 
+import math
+
+print(math.pi)
+
+print(math.sqrt(4))
 
