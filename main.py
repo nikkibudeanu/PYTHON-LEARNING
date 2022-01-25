@@ -2356,6 +2356,32 @@ parrot = Parrot('blue')
 print(parrot.color)
 print(parrot.description())
 
+
+# passing methods challenge 
+class Employee:
+    """ 
+    Creates an instance of Employee
+    """
+    def __init__(self, name, annual_salary):
+        self.name = name
+        self.annual_salary = annual_salary
+        
+    def calculate_monthly_salary(self):
+        return self.annual_salary / 12
+        
+class CustomerServiceEmployee(Employee):
+    """ 
+    Creates an instance of CustomerServiceEmployee
+    """
+    def __init__(self, name, annual_salary, department):
+        self.department = department
+        super().__init__(name, annual_salary)
+
+cs_manager = CustomerServiceEmployee("Kelly Johnson", 42000, "Customer Service")
+kellys_monthly_salary = cs_manager.calculate_monthly_salary()
+print(kellys_monthly_salary)
+
+
 # import statement
 
 # When you create a Python program, you split your code up into different files to avoid repetition. 
@@ -2817,14 +2843,91 @@ def choices(n):
 
 choices(3)
 
+<<<<<<< HEAD
 #Try Statements
+=======
+# python decorators
+"""
+A decorator is a way in Python to add new functionality to an existing method without modifying its structure. 
+This is useful as you do not need to create new functionality in your code if a decorator already exists for that purpose.
+
+Now let's look at a real-world example of using a decorator if we return to Bird objects again. 
+We have an instance variable called fowl_types with information about the species. We don’t want to 
+accidentally corrupt this information. Classes should only share what data is needed. 
+This is known as Encapsulation and Separation of Concerns. 
+To mark fowl_types as private and only available to other methods in the class, we have prefixed the name with a dunder.
+ Now we cannot access it but the new method within the class named fowl_types() can. 
+ The return in the description method now uses that method to display the information on fowl types. 
+ However, for this to work, we need to give read-only access. A built-in decorator already exists in Python for 
+ that purpose. Therefore we can wrap the fowl_types() method in a @property decorator. 
+ Try removing it to see what happens.
+
+
+"""
+class Bird(object):
+    """
+    Bird superclass
+    """
+    def __init__(self, kind, call):
+        # instance attributes
+        self.kind = kind
+        self.call = call
+
+    def description(self):
+        """
+        Returns description string including instance attributes
+        """
+        return f'A {self.kind} goes {self.call}'
+
+
+class Fowl(Bird):
+    """
+    Subclass of the superclass Bird
+    """
+    def __init__(self, kind, call, category):
+        self._fowl_types = {'landfowl': 'Landfowl is an order of heavy-bodied ground-feeding birds that includes\n'
+                                       'turkey, grouse, chicken, New World quail and Old World quail,\n'
+                                       'ptarmigan, partridge, pheasant, junglefowl and the Cracidae\n',
+                           'waterfowl': 'Waterfowl is an order of birds that comprises about 180 living species\n'
+                                        'in three families: Anhimidae (the screamers), Anseranatidae\n'
+                                        '(the magpie goose), and Anatidae,the largest family, which\n'
+                                        'includes over 170 species of waterfowl,\n'
+                                        'among them the ducks, geese, and swans.\n'}
+        self.category = category
+        # Uses super() function to state kind, call from superclass Bird
+        super().__init__(kind, call)
+
+    @property
+    def fowl_types(self):
+        return self._fowl_types[self.category.lower()]
+
+
+    def description(self):
+        """
+        Returns string from superclass description method and
+        appends a string to include additional information
+        """
+        return f'{super().description()} \nSome interesting facts about the {self.kind} : A {self.kind} is of type {self.category}. {self._fowl_types[self.category.lower()]}'
+
+
+mute = Fowl('Swan', 'honk', 'Waterfowl')
+print(mute.description())
+print(mute.fowl_types)
+
+#Try Statements
+
+>>>>>>> 2532dd6bb40fb8b06fdbcea7b4fc6c4b0c99a913
 """
 In the previous unit, we saw that we could raise an error when a user does something unexpected. 
 However, the program still crashed. 
 It is better to catch and handle these exceptions in such a way that your application continues to run. 
 Python has a try block in which you put code where you anticipate an error could occur. 
 Often this is where you foresee an issue caused by a users input or corrupt data in a file. 
+<<<<<<< HEAD
 The program runs any code after the try statement in the usual manner.
+=======
+The program runs any code after the try statement in the usual manner. 
+>>>>>>> 2532dd6bb40fb8b06fdbcea7b4fc6c4b0c99a913
 However, if an error occurs rather than raise an exception in the terminal, it runs code in a following except block. 
 After the except statement, you write the code for what you want to do in cases where an error occurs. 
 If this is user input, it might just be a message to the user that the data was invalid and please try again. 
@@ -2832,6 +2935,7 @@ If it is data from a file, then you might just skip the bad data points and carr
 In summary, the try block allows you to test a code block for errors. 
 The except block enables you to handle the errors.
 
+<<<<<<< HEAD
 
 In the runnable example, we have asked the user for a number. 
 This code block is wrapped in a try block and runs exactly as though the try block was not there as long 
@@ -2886,3 +2990,20 @@ print(hyundai)
 
 
 
+=======
+"""
+
+# In the runnable example, we have asked the user for a number. 
+# This code block is wrapped in a try block and runs exactly as though the try block was not there as long 
+# as the user enters numbers. 
+# However, if the user enters a letter, for example, there is an error, and the except block code is run. 
+# In this case, we just print ‘Not a number’, but crucially the code keeps running and asks the user for input again. 
+# The error is caught and handled.
+
+while True:
+    try:
+        x = int(input('Enter a number.'))
+        print(f'Number is {x}')
+    except ValueError:
+        print('Not a number')
+>>>>>>> 2532dd6bb40fb8b06fdbcea7b4fc6c4b0c99a913
