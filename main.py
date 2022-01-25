@@ -2441,3 +2441,14 @@ print(the_date)
 
 the_time = datetime.now().time()
 print(the_time)
+
+
+# challenge datetime
+
+from datetime import datetime
+
+# write your code here
+today =datetime.now().date()
+print(today)
+
+
