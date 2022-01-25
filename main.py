@@ -2355,3 +2355,41 @@ class Parrot(Bird):
 parrot = Parrot('blue')
 print(parrot.color)
 print(parrot.description())
+
+# import statement
+
+# When you create a Python program, you split your code up into different files to avoid repetition. 
+# These files are known as modules. We touched on this in the Frameworks, Modules And Libraries unit. 
+# Python allows you to import entire modules or individual functions, classes or variables into other modules.
+
+# Python has built-in modules that we can import from as well. We do this with the import statement.
+
+# In the runnable example, we have a division function in a divide.py module. 
+# Click on the Files button to see the other files. 
+# In main.py, we have imported the division function from the divide.py module, 
+# which allows us to use the division function using the division() syntax directly. 
+# However, we do not have access to the mod function unless we also add a from divide import mod statement in main.py.
+
+from divide import division
+
+
+print(division(4, 2))
+
+
+# challenge import statement
+
+import helpers
+list_integers = [1,2,3,4,5]
+
+
+
+addition = helpers.add_integers(list_integers)
+print(addition)
+
+multiplication = helpers.multiply_intergers(list_integers)
+print(multiplication)
+
+
+
+
+
