@@ -2843,3 +2843,46 @@ The error is caught and handled.
 
 
 """
+
+# challenge try method
+cars = {'ford': 10, 'opel': 5 }
+
+def get_val(key):
+    try:
+        return cars[key]
+    except:
+        return None
+
+ford = get_val('ford')
+print(ford)
+
+hyundai = get_val('hyundai')
+print(hyundai)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
