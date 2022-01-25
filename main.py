@@ -2774,3 +2774,14 @@ import collections
 text = open('book.txt', 'r').read().lower()
 words = re.findall('\w+', text)
 print(collections.Counter(words).most_common(10))
+
+# challenge reading, returning data
+def get_content(file):
+    song = open(file, 'r')
+    lines = song.read()
+    song.close()
+    return lines
+    
+lyrics = get_content("lyrics.txt")
+
+print(lyrics)
