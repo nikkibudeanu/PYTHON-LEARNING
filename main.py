@@ -3000,7 +3000,33 @@ while True:
     except Exception:
         print('Another error has occurred')
 
-        
+
+#Catching Specific Errors
+
+"""
+In addition to the basic RuntimeError, you have seen the use of ValueError and ZeroDivisionError. 
+These are more specific exceptions provided by Python. 
+When writing your code, it is essential to think about what possible errors might happen and how to handle them. 
+It is a good idea to test your code as you go. 
+What happens when you enter incorrect values for your function arguments, for example? 
+Using more specific exceptions can make it quicker to debug what has gone wrong with your code. 
+When you raise an exception, you can include a string of text to provide information pertinent to your code.
+
+A specific exception can be raised anywhere in your code to catch errors. 
+In the example, we have a try block which counts down from 5 to -5 but raises an exception for negative numbers. 
+At the point this exception is raised the except block is run. 
+This time a list is looped through and an exception is raised if a non-integer value is seen. 
+Note that both exceptions include custom text. In the except a TypeError has been raised as we are explicitly 
+checking for type.
+
+
+
+"""
+# try except challenge
+try:
+    print(non_existent_variable)
+except NameError:
+    print("Variable not defined")
 
 
 
