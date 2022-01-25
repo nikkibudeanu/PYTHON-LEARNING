@@ -3117,6 +3117,51 @@ print("\n")
 linecount('swift.txt')
 
 
+"""
+As you are already aware when using IO, you always should close the file when you are finished working on it. 
+As this is such an important issue, Python has included a with statement to deal with it. 
+Behind the scenes, it is in effect a type of try-finally statement.
+
+"""
+f = open(filename)
+try:
+    # My Code
+finally:
+    f.close()
+    
+#In reality, what is happening is that special methods __enter__ and __exit__ are used.
+
+f = open()
+f.__enter__()
+try:
+    # My Code
+finally:
+    f.__exit__()
+    
+#You do not need to type any of this code. Just use the with statement as follows.
+with open(filename) as f:
+       #My Code
+def linecount(filename):
+    """
+    Counts the lines in a text file.
+    Prints the opening line of a text file. 
+    """
+    try:
+        with open(filename, 'r') as f:
+            s = f.readlines()
+    except OSError as e:
+        errno, strerror = e.args
+        print(f"There is an I/O error number, {errno}: {strerror}.")
+    else:
+
+        print(f'{filename} is {len(s)} line long.')
+        print(f"The opening line of {filename} is '{s[0]}'")
+    finally:
+        print(f'Finished with {filename}.')
+        
+linecount('gulliver.txt')
+print("\n")
+linecount('swift.txt')
 
 
 
