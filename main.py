@@ -2356,6 +2356,32 @@ parrot = Parrot('blue')
 print(parrot.color)
 print(parrot.description())
 
+
+# passing methods challenge 
+class Employee:
+    """ 
+    Creates an instance of Employee
+    """
+    def __init__(self, name, annual_salary):
+        self.name = name
+        self.annual_salary = annual_salary
+        
+    def calculate_monthly_salary(self):
+        return self.annual_salary / 12
+        
+class CustomerServiceEmployee(Employee):
+    """ 
+    Creates an instance of CustomerServiceEmployee
+    """
+    def __init__(self, name, annual_salary, department):
+        self.department = department
+        super().__init__(name, annual_salary)
+
+cs_manager = CustomerServiceEmployee("Kelly Johnson", 42000, "Customer Service")
+kellys_monthly_salary = cs_manager.calculate_monthly_salary()
+print(kellys_monthly_salary)
+
+
 # import statement
 
 # When you create a Python program, you split your code up into different files to avoid repetition. 
@@ -2816,3 +2842,5 @@ def choices(n):
         raise RuntimeError
 
 choices(3)
+
+#Try Statements
