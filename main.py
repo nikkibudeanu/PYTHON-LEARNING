@@ -2558,3 +2558,16 @@ print('A random choice from a list: ' + random.choice(['paper', 'scissors', 'roc
 deck = ['hearts', 'diamonds', 'spades', 'clubs']
 random.shuffle(deck)
 print(deck)
+
+# random challenge
+
+import random 
+
+def ten_rand_nums():
+    return [random.randrange(101) for i in range(0,10)]
+    
+result = ten_rand_nums()
+print(result)
+
+random.shuffle(result)
+print(result)
