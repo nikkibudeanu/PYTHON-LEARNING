@@ -2414,3 +2414,30 @@ print(round_down)
 
 square_root = math.sqrt(round_down)
 print(square_root)
+
+# datetime
+
+"""
+In the runnable example, we have displayed the current date and time on the repl.it server where this code is running. 
+The date contains a year, month, day, hour, minute, second and microsecond. 
+The library contains methods to access that data. We have obtained the year and printed it to the console. 
+A common usage of the datetime library is to get a readable string from the datetime object. 
+There is a method called strftime() that takes a parameter format to return the string as you would like 
+to display it to your user. In the first part of the runnable example we have shown the day of the week.
+
+We can also access date information with python using datetime instance methods such as date() and time(). 
+You can see these in action in the second part of the runnable example below.
+"""
+
+from datetime import datetime
+
+x = datetime.now()
+print(x)
+print(x.year)
+print(x.strftime("%A"))
+
+the_date = datetime.now().date()
+print(the_date)
+
+the_time = datetime.now().time()
+print(the_time)
