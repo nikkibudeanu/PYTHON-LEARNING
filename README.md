@@ -43,3 +43,13 @@ age = input("Enter your age: ")
 print("Hello "  +  name + "! You are " + age)
 
 
+# building a basic calculator
+
+Float() is used to be able to add numbers with decimals. 
+
+num1 = input("Enter a number: ")
+num2 = input("Enter another number: ")
+result = float(num1) + float(num2)
+
+print(result)
+
