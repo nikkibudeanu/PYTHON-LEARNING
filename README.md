@@ -21,6 +21,7 @@ print(phrase.index("G"))
 print(phrase.replace("Giraffe", "Elephant"))
 
 # numbers
+add this to the file to be able to access more math methods - from math import *
 print(3 * 4 + 5)
 print(10 % 3)
 my_num = 5
@@ -34,4 +35,11 @@ print(round(3.8))
 print(floor(3.6))
 print(ceil(3.7))
 print(sqrt(36))
+
+# getting input from users
+
+name = input("Enter your name: ")
+age = input("Enter your age: ")
+print("Hello "  +  name + "! You are " + age)
+
 
