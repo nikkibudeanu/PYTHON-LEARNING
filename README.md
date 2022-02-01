@@ -53,28 +53,20 @@ result = float(num1) + float(num2)
 
 print(result)
 
-"""
-# building tictactoe game
-import random  # Used for computer moves
-import gspread
-from google.oauth2.service_account import Credentials
+# mad libs game
 
-# Google scope
-SCOPE = [
-    "https://www.googleapis.com/auth/spreadsheets",
-    "https://www.googleapis.com/auth/drive.file",
-    "https://www.googleapis.com/auth/drive"
-    ]
+color = input("Enter a color")
+plural_noun = input("Enter a Plural Noun")
+celebrity = input("Enter a celebrity")
 
-CREDS = Credentials.from_service_account_file('creds.json')
-SCOPED_CREDS = CREDS.with_scopes(SCOPE)
-GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
-SHEET = GSPREAD_CLIENT.open('Tic Tac Toe Game Data')
+print("Roses are" + color)
+print(plural_noun +"are blue")
+print("I love" + celebrity)
 
-data = SHEET.worksheet('data')
-
-# Variable 'grid' that is a list of empty strings to create grid.
-grid = [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "]
-symbol = ["x", "o"]
-
-"""
+# lists
+friends = [ "Kevin" , "Karen" , "Artur"]
+print(friends)
+print(friends[2])
+print(friends[1:3])
+# first and the rest
+print(friends[1:])
