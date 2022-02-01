@@ -92,3 +92,9 @@ friends.sort()
 friends.reverse()
 # copies the list
 friends2 = friends.copy()
+
+# tuples are immutable - cannot be changed or modified
+coordinates =(4, 5)
+print(coordinates[0])
+# NOT POSSIBLE
+# coordinates[1] = 10
