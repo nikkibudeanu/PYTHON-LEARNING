@@ -105,3 +105,9 @@ def say_hi(name):
 # parameter is given to be able to call it inside the function
 # call function
 say_hi("Mike")
+
+# return statement
+def cube(num):
+    return num*num*num
+
+print(cube(3))
