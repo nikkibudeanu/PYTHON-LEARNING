@@ -70,3 +70,25 @@ print(friends[2])
 print(friends[1:3])
 # first and the rest
 print(friends[1:])
+
+
+# lists functions
+lucky_numbers = [4, 5, 15, 14, 16, 24, 32]
+print(lucky_numbers)
+lucky_numbers.extend(friends)
+friends.append("Creed")
+# insert an item in the middle of a list
+friends.insert(1, "Nikki")
+friends.remove("Nikki")
+friends.clear()
+# pop last item in the list
+friends.pop()
+# tells the index of an element
+friends.index("Kevin")
+# how many times a value shows up
+friends.count("Jim")
+# sort the list in alphabetical order / order
+friends.sort()
+friends.reverse()
+# copies the list
+friends2 = friends.copy()
