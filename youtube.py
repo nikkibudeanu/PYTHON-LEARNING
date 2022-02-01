@@ -106,8 +106,23 @@ def say_hi(name):
 # call function
 say_hi("Mike")
 
-# return statement
+# return statement - return key breaks us out of the function
 def cube(num):
     return num*num*num
 
 print(cube(3))
+
+# if statement
+is_woman = True
+is_tall = True
+if is_woman or is_tall:
+    print("You are a woman or tall or both")
+else:
+    print("You are neither woman nor tall")
+
+if is_woman and not(is_tall):
+    print("You are short woman")
+else:
+    print("You are either not woman or not tall")
+
+
