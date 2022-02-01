@@ -98,3 +98,10 @@ coordinates =(4, 5)
 print(coordinates[0])
 # NOT POSSIBLE
 # coordinates[1] = 10
+
+# Functions
+def say_hi(name):
+    print("Hello " + name)
+# parameter is given to be able to call it inside the function
+# call function
+say_hi("Mike")
