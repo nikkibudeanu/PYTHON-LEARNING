@@ -272,3 +272,11 @@ except ZeroDivisionError as err:
 except ValueError:
     print("Invalid input")
 
+# reading from external files in python
+scratch_file = open("scratch.txt", "r")
+
+print(scratch_file.read())
+print(scratch_file.readline())
+
+scratch_file.close()
+
